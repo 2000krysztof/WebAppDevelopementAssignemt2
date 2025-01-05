@@ -37,7 +37,7 @@ const getMoviesByIds = async (movieIds) =>{
         throw new Error("movieIds must be an array");
     }
     
-    const movies = await Promise.all(movieIds.map(id => getMovie(id))); // Assumes getMovie is your movie-fetching function
+    const movies = await Promise.all(movieIds.map(id => getMovie(id))); 
     return { total_results: movies.length, results: movies };
 }
 
